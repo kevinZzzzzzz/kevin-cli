@@ -1,0 +1,40 @@
+{
+  "name": "kevin-cli",
+  "version": "1.0.0",
+  "description": "个人脚手架搭建demo",
+  "main": "index.js",
+  "bin": {
+    "kevin": "bin/init.js"
+  },
+  "commandName": "kevinzzzzzzz",
+  "files": [
+    "./bin",
+    "./src",
+    "index.js",
+    "kevin-*",
+    "*-kevin",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kevinzzzzzzz",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.22.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^20.2.5",
+    "@types/prompts": "^2.4.4",
+    "esno": "^0.16.3",
+    "commander": "^10.0.1",
+    "unbuild": "^1.2.1"
+  },
+  "devDependencies": {
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
