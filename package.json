@@ -10,10 +10,11 @@
   "files": [
     "./bin",
     "./src",
-    "index.js",
-    "kevin-*",
-    "*-kevin",
-    "dist"
+    "./http",
+    "./lib",
+    "./utils",
+    "kevin-template",
+    "readme.md"
   ],
   "scripts": {
     "prepublish": "nrm use npm",
