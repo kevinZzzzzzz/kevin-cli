@@ -10,7 +10,7 @@ const program = new Command();
 // console.log(process.argv);
 console.log(
   "\r\n" +
-  chalk.green(figlet.textSync("kevin-cli", {
+  chalk.green(figlet.textSync("kevinzzz-cli", {
       font: "Standard",
       horizontalLayout: "default",
       verticalLayout: "default",
