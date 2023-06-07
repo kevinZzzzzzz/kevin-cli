@@ -26,8 +26,15 @@
     "@types/node": "^20.2.5",
     "@types/prompts": "^2.4.4",
     "esno": "^0.16.3",
-    "commander": "^10.0.1",
-    "unbuild": "^1.2.1"
+    "unbuild": "^1.2.1",
+    "axios": "^0.26.1",
+    "chalk": "^4.0.0",
+    "commander": "^9.0.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.0.1",
+    "inquirer": "^8.2.1",
+    "ora": "^5.0.0"
   },
   "devDependencies": {
     "kolorist": "^1.8.0",
