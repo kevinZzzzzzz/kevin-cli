@@ -1,6 +1,6 @@
 {
   "name": "kevinzzz-cli",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "个人脚手架搭建",
   "main": "index.js",
   "bin": {
@@ -8,11 +8,11 @@
   },
   "commandName": "kevinzzzzzzz",
   "files": [
-    "./bin",
-    "./src",
-    "./http",
-    "./lib",
-    "./utils",
+    "bin",
+    "src",
+    "http",
+    "lib",
+    "utils",
     "kevin-template",
     "readme.md"
   ],
