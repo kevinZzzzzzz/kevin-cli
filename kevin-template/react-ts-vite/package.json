@@ -18,11 +18,11 @@
     "react-redux": "^8.0.7",
     "react-router-dom": "^6.8.1"
   },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts}": [
-      "eslint src"
-    ]
-  },
+	"lint-staged": {
+		"src/**/*.{js,jsx,tsx,ts}": [
+			"eslint"
+		]
+	},
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
@@ -45,6 +45,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "6.3.0",
     "vite-plugin-require-transform": "^1.0.5",
+		"vite-plugin-webpackchunkname": "^0.2.4",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "rollup-plugin-visualizer": "^5.9.0"

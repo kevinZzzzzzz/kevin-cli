@@ -24,7 +24,7 @@ const store = createPinia().use(piniaPluginPersist)
 const app = createApp(App)
 app.config.globalProperties.$api = { ...api }
 // 全局错误拦截
-app.config.errorHandler = (err: any, vm: any, info: any) => {
+app.config.errorHandler = (err, vm, info) => {
   console.error()
 }
 app.use(store).use(router).mount('#app')

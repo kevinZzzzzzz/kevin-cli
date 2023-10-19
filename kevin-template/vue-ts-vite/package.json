@@ -16,13 +16,14 @@
     "pinia": "^2.0.35",
     "pinia-plugin-persist": "^1.0.0",
     "vue": "^3.2.47",
+    "hoslink-xxx": "^1.1.2",
     "vue-router": "^4.1.6"
   },
-  "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx,json,css,scss,md,vue}": [
-      "eslint --fix --max-warnings=0"
-    ]
-  },
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,vue}": [
+			"eslint --fix --max-warnings=0"
+		]
+	},
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
@@ -41,12 +42,13 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.14.1",
-    "hoslink-xxx": "^1.1.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "rollup-plugin-visualizer": "^5.9.0",
+    "vite-plugin-webpackchunkname": "^0.2.4",
     "typescript": "*",
     "vite": "^4.3.9",
+    "unplugin-vue-components": "^0.24.1",
     "vue-tsc": "^0.39.5"
   },
   "config": {

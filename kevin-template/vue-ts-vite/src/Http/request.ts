@@ -46,7 +46,7 @@ class HttpRequest {
       async (response: any) => {
         const { status, data } = response
         if (status === 200) {
-          if (data.code + '' === '0') {
+          if (+data.code === 0) {
             return await Promise.resolve(data)
           } else {
             return await Promise.reject(data)
