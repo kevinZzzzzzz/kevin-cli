@@ -1,12 +1,3 @@
-/*
- * @Author: kevinZzzzzz
- * @Date: 2023-06-02 10:58:36
- * @version:
- * @LastEditors: kevinZzzzzz
- * @LastEditTime: 2023-06-02 11:36:18
- * @Description: 入口ts
- * @FilePath: \vue-ts-vite\src\main.ts
- */
 import { createApp } from 'vue'
 import './style.less'
 import { createPinia } from 'pinia'

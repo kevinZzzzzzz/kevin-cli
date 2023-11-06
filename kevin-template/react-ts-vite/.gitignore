@@ -6,6 +6,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+/stats.html
+pnpm-lock.yaml
+package-lock.json
+# production
+/build
+/dist
 
 node_modules
 dist

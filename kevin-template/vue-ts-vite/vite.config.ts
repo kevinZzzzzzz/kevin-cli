@@ -1,7 +1,9 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer';
+import { manualChunksPlugin } from 'vite-plugin-webpackchunkname'
 import path from 'path'
+import viteImagemin from 'vite-plugin-imagemin'
 
 
 export default ({mode, command}) => {
@@ -19,6 +21,13 @@ export default ({mode, command}) => {
   return defineConfig({
     plugins: [
       vue(),
+      manualChunksPlugin(),
+      viteImagemin({ // 压缩图片
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4
+        },
+      }),
     ].concat(analysPlugins),
     build: {
       emptyOutDir: true,

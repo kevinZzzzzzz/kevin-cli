@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 class HttpRequest {
-  constructor() {}
+  constructor () {}
   /*
     isShowToast: 是否显示接口返回信息
     isShowLoading： 是否显示接口加载状态
@@ -25,33 +25,43 @@ class HttpRequest {
     instance.interceptors.request.use(
       (config: any) => {
         config.baseURL = location.origin
+        config.timeout = 5000; // 请求超时
         return config
       },
 
-      async (error: any) => {
-        return await Promise.reject(error)
+      (error: any) => {
+        return Promise.reject(error)
       }
     )
     // 响应拦截
     instance.interceptors.response.use(
-      async (response: any) => {
+      (response: any) => {
         const { status, data } = response
-        if (status === 200) {
-          if (data.code + '' === '0') {
-            return await Promise.resolve(data)
+        return new Promise((resolve, reject) => {
+          if (status === 200) {
+            switch(+data.code) {
+              case 0:
+                resolve(data);
+                break;
+              default: // 其余异常
+                reject(response);
+                break;
+            }
           } else {
-            return await Promise.reject(data)
+            reject(response);
           }
-        }
+        })
       },
-      async (error: any) => {
+      (error: any) => {
         const {
           response: { status }
         } = error
         // if (status === 403) {
         //   window.location.hash = '#/home'
         // }
-        return await Promise.reject(error)
+        return new Promise((resolve, reject) => {
+          reject(error);
+        })
       }
     )
   }
