@@ -1,6 +1,6 @@
 {
   "name": "kevinzzz-cli",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "个人脚手架搭建",
   "main": "index.js",
   "bin": {
