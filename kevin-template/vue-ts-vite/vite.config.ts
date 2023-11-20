@@ -4,6 +4,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { manualChunksPlugin } from 'vite-plugin-webpackchunkname'
 import path from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
+import AutoImport from 'unplugin-auto-import/vite'
 
 
 export default ({mode, command}) => {
@@ -21,6 +22,13 @@ export default ({mode, command}) => {
   return defineConfig({
     plugins: [
       vue(),
+      AutoImport({
+        imports:["vue","vue-router"], // 自动引入
+        dts: 'src/type/auto-import.d.ts', // 生成文件的位置
+        eslintrc: { // 开启eslint校验
+          enabled: true,
+        },
+      }),
       manualChunksPlugin(),
       viteImagemin({ // 压缩图片
         pngquant: {

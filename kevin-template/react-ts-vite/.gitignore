@@ -12,6 +12,8 @@ package-lock.json
 # production
 /build
 /dist
+.eslintrc-auto-import.json
+auto-import.d.ts
 
 node_modules
 dist

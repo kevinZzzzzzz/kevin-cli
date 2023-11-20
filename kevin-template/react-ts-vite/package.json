@@ -39,16 +39,17 @@
     "typescript": "*",
     "vite": "^4.3.9",
     "sass": "^1.63.2",
-    "commitizen": "^4.3.0",
-    "commitlint": "^17.6.5",
-    "commitlint-config-cz": "^0.13.3",
+    "commitizen": "4.3.0",
+    "commitlint": "17.6.5",
+    "commitlint-config-cz": "0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "6.3.0",
     "vite-plugin-require-transform": "^1.0.5",
 		"vite-plugin-webpackchunkname": "^0.2.4",
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
-    "rollup-plugin-visualizer": "^5.9.0"
+    "rollup-plugin-visualizer": "^5.9.0",
+		"unplugin-auto-import": "^0.16.7"
   },
   "config": {
     "commitizen": {

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { manualChunksPlugin } from 'vite-plugin-webpackchunkname'
 import { visualizer } from 'rollup-plugin-visualizer';
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default ({mode, command}) => {
@@ -18,6 +19,13 @@ export default ({mode, command}) => {
   return defineConfig({
     plugins: [
       react(),
+      AutoImport({
+        imports:["react", "react-router-dom"],
+        dts: 'src/type/auto-import.d.ts',    // 路径下自动生成文件夹存放全局指令
+        eslintrc: { // 开启eslint校验
+          enabled: true,
+        },
+      }),
       manualChunksPlugin()
     ].concat(analysPlugins),
     build: {
