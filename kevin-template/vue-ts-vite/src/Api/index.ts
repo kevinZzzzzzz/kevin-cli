@@ -1,4 +1,4 @@
-import http from '@/Http'
+import http from '@/http'
 import { type AxiosResponse } from 'axios'
 // 设置代理
 const setProxy = (url: string): string => {

@@ -2,8 +2,8 @@ import React from 'react';
 import {HashRouter, Navigate , Route, Routes, useLocation} from 'react-router-dom'
 import ReactDOM from 'react-dom';
 import {AllRouters as routes} from "./router/index";
-import DefaultLayout from './Layout/default';
-import api from "@/Api";
+import DefaultLayout from './layout/Default';
+import api from "@/api";
 
 declare global {
   interface Window {

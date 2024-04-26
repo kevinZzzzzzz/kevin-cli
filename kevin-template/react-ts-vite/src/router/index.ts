@@ -12,14 +12,14 @@ const HomePage: RouterInterface = {
   key: 0,
   name: 'Home',
   path: '/home',
-  component: lazy(() => import(/* webpackChunkName: "home" */ '@/Pages/Home/index')),
+  component: lazy(() => import(/* webpackChunkName: "home" */ '@/pages/Home/index')),
   children: []
 }
 const NotFoundPage: RouterInterface = {
   key: 1,
   name: 'NotFound',
   path: '/404',
-  component: lazy(() => import(/* webpackChunkName: "404" */ '@/Pages/404/index')),
+  component: lazy(() => import(/* webpackChunkName: "404" */ '@/pages/404/index')),
   children: []
 }
 

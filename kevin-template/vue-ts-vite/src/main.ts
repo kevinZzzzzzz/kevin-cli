@@ -3,7 +3,7 @@ import './style.less'
 import { createPinia } from 'pinia'
 import piniaPluginPersist from 'pinia-plugin-persist'
 import router from './router/index'
-import api from '@/Api'
+import api from '@/api'
 import App from './App.vue'
 
 declare module 'vue' {
