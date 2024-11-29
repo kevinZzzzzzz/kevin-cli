@@ -1,0 +1,7 @@
+.menuComp {
+  max-height: calc(100vh - var(--layout-header-height) - var(--layout-footer-height));
+  overflow-y: scroll;
+}
+.menuComp::-webkit-scrollbar {
+  display: none;
+}

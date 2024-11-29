@@ -1,0 +1,40 @@
+.HeaderComp {
+  display: flex;
+  align-items: center;
+  &_leftCtx {
+    flex: 15 1 auto;
+  }
+  &_rightCtx {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr 1fr;
+    grid-gap: 1px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    &_item {
+      text-align: center;
+      cursor: pointer;
+      &_avatar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &_name {
+          margin-left: 5px;
+          max-width: 80px;
+          overflow: hidden;/*内容超出后隐藏*/
+          text-overflow: ellipsis;/*超出内容显示为省略号*/
+          white-space: nowrap;/*文本不进行换行*/
+        }
+      }
+    }
+  }
+}
+.settingItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_title {
+    margin-left: 10px;
+  }
+}
