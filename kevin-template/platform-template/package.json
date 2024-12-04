@@ -24,7 +24,8 @@
     "react-i18next": "^15.1.2",
     "react-redux": "^8.0.7",
     "react-router-dom": "^6.8.1",
-    "redux": "^4.2.1"
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts}": [

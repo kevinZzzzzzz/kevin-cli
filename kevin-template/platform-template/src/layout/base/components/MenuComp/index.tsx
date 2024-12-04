@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -33,13 +33,13 @@ const MenuComp: React.FC = (props: any) => {
   const [selectedKeys, setSelectedKeys] = useState(["0"]);
   const [stateOpenKeys, setStateOpenKeys] = useState(["0"]);
   const { pathname, search } = location;
+  const isMounted = useRef(false);
 
   useEffect(() => {
-    settingMenu(flattenMenuList, true);
-  }, []);
-  useEffect(() => {
-    // 切换路由时 更新父子级菜单的激活状态
-    if (flattenMenuList.length) {
+    if (!isMounted.current) {
+      settingMenu(flattenMenuList, true);
+    } else {
+      // 切换路由时 更新父子级菜单的激活状态
       settingMenu(flattenMenuList);
     }
   }, [location]);
@@ -47,12 +47,11 @@ const MenuComp: React.FC = (props: any) => {
     setMenuList(MenuInitList);
   }, [props.collapsed]);
 
-  /*
-    初始化或者切换路由时, 保存menu组件的父子级菜单的激活状态
-    @params:
-      menu: 扁平后的菜单
-      isInit: 是否为初始化
-  */
+  /**
+   * 初始化或者切换路由时, 保存menu组件的父子级菜单的激活状态
+   * @params menu: 扁平后的菜单
+   * @params isInit: 是否为初始化
+   */
   function settingMenu(menu: any, isInit = false) {
     const activeItem = menu.find(
       (d: any) => d.path == pathname || d.path == `${pathname}${search}`
@@ -67,13 +66,20 @@ const MenuComp: React.FC = (props: any) => {
         key: activeItem.key,
         path: activeItem.path,
       };
+      const newHeaderTabList = JSON.parse(JSON.stringify(headerTabList));
       if (isInit) {
         // 初始化更新headerTabs
-        dispatch(changeHeaderTabList({ headerTabList: [obj] }));
+        if (!newHeaderTabList.length) {
+          dispatch(
+            changeHeaderTabList({
+              headerTabList: [{ ...obj }],
+            })
+          );
+        }
+        isMounted.current = true;
       } else {
-        const newHeaderTabList = JSON.parse(JSON.stringify(headerTabList));
         // 先判断是否已打开过
-        const isExist = newHeaderTabList.find((a: any) => a.key == obj.key);
+        const isExist = newHeaderTabList.find((a) => a.key == obj.key);
         if (!isExist) {
           const item = {
             label: obj.label,
@@ -97,12 +103,6 @@ const MenuComp: React.FC = (props: any) => {
   };
   const onOpenChange = (openKeysTemp: string[]) => {
     // console.log(openKeysTemp, "openKeysTemp--------");
-    // if (!openKeysTemp.length) {
-    //   setStateOpenKeys([]);
-    //   return false
-    // }
-    // const keys = []
-    // const
     if (openKeysTemp.length) {
       setStateOpenKeys(openKeysTemp);
     } else {

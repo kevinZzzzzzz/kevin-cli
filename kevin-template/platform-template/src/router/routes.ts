@@ -91,8 +91,8 @@ export const generatedRoutes: GeneratedRoute[] = [
   },
   {
     key: "3",
-    name: "Exception",
-    path: "/exception",
+    name: "Exception1",
+    path: "/exception1",
     layout: "layout.base",
     meta: {
       title: "exception",
@@ -105,7 +105,7 @@ export const generatedRoutes: GeneratedRoute[] = [
       {
         key: "301",
         name: "403",
-        path: "/exception/403",
+        path: "/exception1/403",
         layout: "layout.base",
         component: "pages.exception.403",
         meta: {
@@ -120,7 +120,7 @@ export const generatedRoutes: GeneratedRoute[] = [
       {
         key: "302",
         name: "404",
-        path: "/exception/404",
+        path: "/exception1/404",
         layout: "layout.base",
         component: "pages.exception.404",
         meta: {
@@ -135,7 +135,7 @@ export const generatedRoutes: GeneratedRoute[] = [
       {
         key: "303",
         name: "500",
-        path: "/exception/500",
+        path: "/exception1/500",
         layout: "layout.base",
         component: "pages.exception.500",
         meta: {

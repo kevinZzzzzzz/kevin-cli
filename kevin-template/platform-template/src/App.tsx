@@ -65,9 +65,7 @@ function App() {
                   element={
                     <e.layout>
                       <Suspense fallback={<LoadingComp></LoadingComp>}>
-                        <KeepAliveComp {...e}>
-                          <e.component />
-                        </KeepAliveComp>
+                        <KeepAliveComp {...e}></KeepAliveComp>
                       </Suspense>
                     </e.layout>
                   }

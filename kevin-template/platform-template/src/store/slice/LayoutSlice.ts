@@ -7,7 +7,9 @@ export const LayoutSlice = createSlice({
     collapsed: false,
     fullScreen: false,
     // { label: "首页", path: "/home", key: "0" }
-    headerTabList: [], // 顶部tab栏
+    headerTabList: [
+      { label: "首页", path: "/home", key: "0", closable: false },
+    ], // 顶部tab栏
     activeTabKey: "1", // 当前激活的页面key
     activePathInfo: {}, // 当前激活的页面信息
   },
@@ -33,14 +35,20 @@ export const LayoutSlice = createSlice({
     changeLocale(state: any, { payload }) {
       state.locale = payload.locale;
     },
+    // 当前激活的path信息
     changeActivePath(state: any, { payload }) {
       state.activePathInfo = payload.activePathInfo;
     },
+    // 切换tab栏key
     changeActiveTabKey(state: any, { payload }) {
       state.activeTabKey = payload.activeTabKey;
     },
+    // 切换tab栏列表
     changeHeaderTabList(state, { payload }) {
       if (payload.headerTabList) {
+        payload.headerTabList.forEach((item) => {
+          item.closable = +item.key != 0;
+        });
         state.headerTabList = payload.headerTabList;
       }
     },
