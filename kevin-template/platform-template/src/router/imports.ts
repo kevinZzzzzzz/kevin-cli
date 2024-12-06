@@ -1,6 +1,7 @@
 import BaseLayout from "@/layout/base";
 import BlankLayout from "@/layout/blank";
 import { lazy } from "react";
+import NProgress from "nprogress";
 
 // 页面路径前缀
 export const VIEW_PREFIX = "pages.";
@@ -35,3 +36,13 @@ export const ROUTER_NAME_TO_PAGES_MAP = {
     () => import(/* webpackChunkName: "500" */ "@/pages/exception/500")
   ),
 };
+/** Setup plugin NProgress */
+export function setupNProgress() {
+  NProgress.configure({
+    easing: "ease",
+    speed: 500,
+  });
+
+  // mount on window
+  window.NProgress = NProgress;
+}

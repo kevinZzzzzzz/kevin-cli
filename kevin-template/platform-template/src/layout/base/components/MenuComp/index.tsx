@@ -36,6 +36,7 @@ const MenuComp: React.FC = (props: any) => {
   const isMounted = useRef(false);
 
   useEffect(() => {
+    window.NProgress?.start();
     if (!isMounted.current) {
       settingMenu(flattenMenuList, true);
     } else {

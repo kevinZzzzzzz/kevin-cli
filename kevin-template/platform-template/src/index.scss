@@ -1,3 +1,5 @@
+@use './src/styles/nprogress.scss';
+
 html, body {
   margin: 0;
   padding: 0;
@@ -49,4 +51,5 @@ ul {
   --layout-tab-height: 44px;
   --layout-footer-height: 48px;
   --layout-tabs-subMenu-boxShadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
+  --nprogress-color: #1668dc;
 }

@@ -12,9 +12,12 @@ import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { ColorByTheme } from "./constants/theme";
 import "@/locales/config";
 import { useTranslation, Trans } from "react-i18next";
+import { setupNProgress } from "./router/imports";
+setupNProgress();
 declare global {
   interface Window {
     $api: any;
+    NProgress: any;
   }
 }
 /* 
@@ -29,6 +32,7 @@ function App() {
   });
 
   useEffect(() => {
+    window.NProgress?.start();
     i18n.changeLanguage(locale);
   }, [locale]);
   return (
