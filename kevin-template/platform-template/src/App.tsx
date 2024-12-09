@@ -33,6 +33,7 @@ function App() {
 
   useEffect(() => {
     window.NProgress?.start();
+    window.NProgress?.done();
     i18n.changeLanguage(locale);
   }, [locale]);
   return (

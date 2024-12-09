@@ -96,7 +96,7 @@ export const generatedRoutes: GeneratedRoute[] = [
     layout: "layout.base",
     meta: {
       title: "exception",
-      i18nKey: "exception",
+      i18nKey: "exception1",
       icon: "RocketOutlined",
       order: 2,
       needShow: true,

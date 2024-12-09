@@ -214,7 +214,7 @@ function TabsComp(props: any) {
         // 更新激活的tabKey
         dispatch(changeActiveTabKey({ activeTabKey: "0" }));
         dispatch(changeHeaderTabList({ headerTabList: newHeaderTabList }));
-        newActPath && navigate("/home");
+        navigate("/home");
         break;
       default:
         break;
