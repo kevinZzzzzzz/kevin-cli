@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import styles from "./index.module.scss";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
-import { ConfigProvider, Layout, Menu, Tabs, theme } from "antd";
+import { Card, ConfigProvider, Layout, Menu, Tabs, theme } from "antd";
 import { changeActiveTabKey, changeCollapsed } from "@/store/slice/LayoutSlice";
 import "dayjs/locale/zh-cn";
 import locale from "antd/locale/zh_CN";
@@ -26,7 +26,6 @@ const BaseLayout = ({ children, ...props }) => {
   } = useAppSelector((store: any) => {
     return store.Layout;
   });
-
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Sider
@@ -46,8 +45,10 @@ const BaseLayout = ({ children, ...props }) => {
           <HeaderComp />
         </Header>
         <TabsComp />
-        <Content style={{ ...content }}>
-          <div className={styles.main_context}>{children}</div>
+        <Content
+          style={{ ...content, padding: "var(--layout-content-padding)" }}
+        >
+          <div className={styles.context}>{children}</div>
         </Content>
         <Footer style={{ ...footer }}></Footer>
       </Layout>

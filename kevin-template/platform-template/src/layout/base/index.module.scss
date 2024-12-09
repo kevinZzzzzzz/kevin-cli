@@ -2,9 +2,11 @@
   width: 100vw;
   height: 100vh;
   background-color: #ccc;
-  &_context {
-    
-  }
+}
+.context {
+  min-height: 100%;
+  padding: var(--layout-content-padding);
+  background-color: #fff;
 }
 .sider {
   height: var(--layout-header-height);

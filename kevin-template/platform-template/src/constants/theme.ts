@@ -6,6 +6,7 @@ export const ColorByTheme: IThemeProperty = {
     triggerColor: "rgb(0,0,0)",
     footerBg: "rgb(255, 255, 255)",
     triggerHeight: 48,
+    tabsCardBg: "rgba(0, 0, 0, 0.04)",
   },
   dark: {
     headerBg: "rgb(28, 28, 28)",
@@ -14,6 +15,7 @@ export const ColorByTheme: IThemeProperty = {
     triggerColor: "rgb(255, 255, 255)",
     footerBg: "rgb(28, 28, 28)",
     triggerHeight: 48,
+    tabsCardBg: "rgba(255, 255, 255, 0.2)",
   },
 };
 export const ThemeByLocale = {
@@ -48,7 +50,6 @@ export const ThemeSetting: IThemeSetting = {
   content: {
     height:
       "calc(100vh - var(--layout-header-height) - var(--layout-tab-height) - var(--layout-footer-height))",
-    padding: "0 16px",
     overflowY: "scroll",
   },
   sider: {

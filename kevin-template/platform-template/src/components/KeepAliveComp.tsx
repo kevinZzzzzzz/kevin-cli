@@ -4,9 +4,6 @@ import GuardRouteComp from "./GuardRouteComp";
 
 function KeepAliveComp({ ...props }) {
   const Component = props.component;
-  useEffect(() => {
-    window.NProgress?.done();
-  }, []);
   if (!Component) {
     return <></>;
   }

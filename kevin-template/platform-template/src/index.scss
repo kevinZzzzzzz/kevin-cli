@@ -52,4 +52,19 @@ ul {
   --layout-footer-height: 48px;
   --layout-tabs-subMenu-boxShadow: 0 3px 6px -4px rgba(0, 0, 0, .12), 0 6px 16px 0 rgba(0, 0, 0, .08), 0 9px 28px 8px rgba(0, 0, 0, .05);
   --nprogress-color: #1668dc;
+  --layout-content-padding: 12px;
+}
+
+.fixTopLayout {
+  height: calc(100vh - var(--layout-header-height) - var(--layout-tab-height) - var(--layout-footer-height) - var(--layout-content-padding) * 4);
+  overflow: hidden;
+  position: relative;
+  &_child {
+    overflow-y: auto;
+    height: 100%;
+  }
+}
+.fixTopHeader {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ccc;
 }

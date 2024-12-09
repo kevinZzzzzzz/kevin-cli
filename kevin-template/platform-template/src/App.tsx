@@ -30,7 +30,6 @@ function App() {
   const { theme, locale } = useAppSelector((store) => {
     return store.Layout;
   });
-
   useEffect(() => {
     window.NProgress?.start();
     window.NProgress?.done();
@@ -49,6 +48,9 @@ function App() {
             triggerBg: ColorByTheme[theme]["triggerBg"],
             triggerColor: ColorByTheme[theme]["triggerColor"],
             triggerHeight: ColorByTheme[theme]["triggerHeight"],
+          },
+          Tabs: {
+            cardBg: ColorByTheme[theme]["tabsCardBg"],
           },
         },
       }}
