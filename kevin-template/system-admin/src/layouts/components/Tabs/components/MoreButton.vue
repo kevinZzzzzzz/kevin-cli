@@ -1,7 +1,7 @@
 <template>
   <el-dropdown trigger="click" :teleported="false">
     <div class="more-button">
-      <i :class="'iconfont icon-xiala'"></i>
+      <i :class="'iconfont icon-xiala'" />
     </div>
     <template #dropdown>
       <el-dropdown-menu>
@@ -77,5 +77,5 @@ const closeAllTab = () => {
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
+@use "../index";
 </style>

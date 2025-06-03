@@ -10,5 +10,5 @@ const year = ref(new Date().getFullYear());
 </script>
 
 <style scoped lang="scss">
-@import "./index";
+@use "./index";
 </style>

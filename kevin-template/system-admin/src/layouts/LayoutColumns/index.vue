@@ -15,7 +15,7 @@
             @click="changeSubMenu(item)"
           >
             <el-icon>
-              <component :is="item.meta.icon"></component>
+              <component :is="item.meta.icon" />
             </el-icon>
             <span class="title">{{ $t(`layouts.menu.${item.name}`) }}</span>
           </div>
@@ -99,5 +99,5 @@ const changeSubMenu = (item: Menu.MenuOptions) => {
 </script>
 
 <style scoped lang="scss">
-@import "./index";
+@use "./index";
 </style>

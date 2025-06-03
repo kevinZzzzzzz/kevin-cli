@@ -41,7 +41,7 @@
       </template>
     </el-upload>
     <div class="el-upload__tip">
-      <slot name="tip"></slot>
+      <slot name="tip" />
     </div>
     <el-image-viewer v-if="imgViewVisible" :url-list="[imageUrl]" @close="imgViewVisible = false" />
   </div>

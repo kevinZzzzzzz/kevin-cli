@@ -1,6 +1,6 @@
 <template>
   <div :style="style">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

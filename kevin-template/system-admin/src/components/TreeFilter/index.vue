@@ -6,11 +6,13 @@
     <div class="search">
       <el-input v-model="filterText" placeholder="输入关键字进行过滤" clearable />
       <el-dropdown trigger="click">
-        <el-icon size="20"><More /></el-icon>
+        <el-icon size="20">
+          <More />
+        </el-icon>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item @click="toggleTreeNodes(true)">展开全部</el-dropdown-item>
-            <el-dropdown-item @click="toggleTreeNodes(false)">折叠全部</el-dropdown-item>
+            <el-dropdown-item @click="toggleTreeNodes(true)"> 展开全部 </el-dropdown-item>
+            <el-dropdown-item @click="toggleTreeNodes(false)"> 折叠全部 </el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -158,5 +160,5 @@ defineExpose({ treeData, treeAllData, treeRef });
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@use "./index";
 </style>

@@ -4,7 +4,9 @@
     <div class="not-detail">
       <h2>404</h2>
       <h4>{{ $t(`components.404.msg`) }}~🤷‍♂️🤷‍♀️</h4>
-      <el-button type="primary" @click="router.back"> {{ $t(`components.back`) }} </el-button>
+      <el-button type="primary" @click="router.back">
+        {{ $t(`components.back`) }}
+      </el-button>
     </div>
   </div>
 </template>
@@ -15,5 +17,5 @@ const router = useRouter();
 </script>
 
 <style scoped lang="scss">
-@import "./index";
+@use "./index";
 </style>

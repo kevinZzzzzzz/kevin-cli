@@ -1,6 +1,6 @@
 <template>
   <div class="search-menu">
-    <i :class="'iconfont icon-sousuo'" class="toolBar-icon" @click="handleOpen"></i>
+    <i :class="'iconfont icon-sousuo'" class="toolBar-icon" @click="handleOpen" />
     <el-dialog class="search-dialog" v-model="isShowSearch" :width="600" :show-close="false" top="10vh">
       <el-input
         v-model="searchMenu"
@@ -9,7 +9,7 @@
         size="large"
         clearable
         :prefix-icon="Search"
-      ></el-input>
+      />
       <div v-if="searchList.length" class="menu-list" ref="menuListRef">
         <div
           v-for="item in searchList"
@@ -20,11 +20,11 @@
         >
           <div class="menu-lf">
             <el-icon class="menu-icon">
-              <component :is="item.meta.icon"></component>
+              <component :is="item.meta.icon" />
             </el-icon>
             <span class="menu-title">{{ $t(`layouts.menu.${item.name}`) }}</span>
           </div>
-          <i :class="'iconfont icon-huiche'" class="menu-enter" @click="handleOpen"></i>
+          <i :class="'iconfont icon-huiche'" class="menu-enter" @click="handleOpen" />
         </div>
       </div>
       <el-empty v-else class="mt20 mb20" :image-size="100" :description="$t(`layouts.searchMenu.emptyText`)" />

@@ -9,7 +9,7 @@
             @click="onBreadcrumbClick(item, index)"
           >
             <el-icon v-if="item.meta.icon && globalStore.breadcrumbIcon" class="breadcrumb-icon">
-              <component :is="item.meta.icon"></component>
+              <component :is="item.meta.icon" />
             </el-icon>
             <span class="breadcrumb-title">{{ $t(`layouts.menu.${item.name}`) }}</span>
           </div>

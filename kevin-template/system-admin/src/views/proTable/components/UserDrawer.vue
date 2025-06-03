@@ -28,7 +28,7 @@
         </UploadImgs>
       </el-form-item>
       <el-form-item label="用户姓名" prop="username">
-        <el-input v-model="drawerProps.row!.username" placeholder="请填写用户姓名" clearable></el-input>
+        <el-input v-model="drawerProps.row!.username" placeholder="请填写用户姓名" clearable />
       </el-form-item>
       <el-form-item label="性别" prop="gender">
         <el-select v-model="drawerProps.row!.gender" placeholder="请选择性别" clearable>
@@ -36,18 +36,18 @@
         </el-select>
       </el-form-item>
       <el-form-item label="身份证号" prop="idCard">
-        <el-input v-model="drawerProps.row!.idCard" placeholder="请填写身份证号" clearable></el-input>
+        <el-input v-model="drawerProps.row!.idCard" placeholder="请填写身份证号" clearable />
       </el-form-item>
       <el-form-item label="邮箱" prop="email">
-        <el-input v-model="drawerProps.row!.email" placeholder="请填写邮箱" clearable></el-input>
+        <el-input v-model="drawerProps.row!.email" placeholder="请填写邮箱" clearable />
       </el-form-item>
       <el-form-item label="居住地址" prop="address">
-        <el-input v-model="drawerProps.row!.address" placeholder="请填写居住地址" clearable></el-input>
+        <el-input v-model="drawerProps.row!.address" placeholder="请填写居住地址" clearable />
       </el-form-item>
     </el-form>
     <template #footer>
-      <el-button @click="drawerVisible = false">取消</el-button>
-      <el-button v-show="!drawerProps.isView" type="primary" @click="handleSubmit">确定</el-button>
+      <el-button @click="drawerVisible = false"> 取消 </el-button>
+      <el-button v-show="!drawerProps.isView" type="primary" @click="handleSubmit"> 确定 </el-button>
     </template>
   </el-drawer>
 </template>

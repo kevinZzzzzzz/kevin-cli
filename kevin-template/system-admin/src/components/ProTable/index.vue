@@ -60,7 +60,7 @@
             </template>
             <!-- radio -->
             <el-radio v-if="item.type == 'radio'" v-model="radio" :label="scope.row[rowKey]">
-              <i></i>
+              <i />
             </el-radio>
             <!-- sort -->
             <el-tag v-if="item.type == 'sort'" class="move">
