@@ -1,0 +1,8 @@
+.request-loading .ant-spin-text {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #509ff1 !important;
+}
+.request-loading .ant-spin-dot-item {
+  background-color: #509ff1 !important;
+}

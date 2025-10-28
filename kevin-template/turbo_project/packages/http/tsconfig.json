@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "plugins": [],
+    "outDir": "./lib",
+    "rootDir": ".",
+    "lib": [
+      "ES2015",
+      "ESNext",
+      "dom",
+      "es5",
+      "es6"
+    ],
+    "skipLibCheck": true,
+    "module": "ES2015",
+    "target": "es5",
+    "esModuleInterop": true,
+    "strict": true,
+    "typeRoots": [
+      "index.d.ts",
+      "type.d.ts",
+      "./node_modules/@types"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noEmit": false,
+    "downlevelIteration": true,
+    "declarationDir": "./types",
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "importHelpers": true,
+    "emitDeclarationOnly": false
+  },
+  "include": [
+    "*.ts",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "index.ts",
+    "./**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+    "es",
+    "lib",
+    "lib",
+    "docs",
+    "iife"
+  ],
+}
