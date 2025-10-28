@@ -19,13 +19,13 @@ export default ({mode, command}) => {
   return defineConfig({
     plugins: [
       react(),
-      AutoImport({
-        imports:["react", "react-router-dom"],
-        dts: 'src/type/auto-import.d.ts',    // 路径下自动生成文件夹存放全局指令
-        eslintrc: { // 开启eslint校验
-          enabled: true,
-        },
-      }),
+      // AutoImport({
+      //   imports:["react", "react-router-dom"],
+      //   dts: 'src/type/auto-import.d.ts',    // 路径下自动生成文件夹存放全局指令
+      //   eslintrc: { // 开启eslint校验
+      //     enabled: true,
+      //   },
+      // }),
       manualChunksPlugin()
     ].concat(analysPlugins),
     build: {
@@ -72,7 +72,10 @@ export default ({mode, command}) => {
       preprocessorOptions: {
         // 全局样式引入
         scss:{
-          additionalData: `@import "@/assets/styles/global.scss";`,
+          api: 'modern-compiler', // "modern-compiler" or "modern", "legacy"
+          silenceDeprecations: ['legacy-js-api'], // 重点：解决sass警告问题
+					javascriptEnabled: true,
+          additionalData: `@use "@/assets/styles/global.scss" as *;`,
         }
       },
     }
