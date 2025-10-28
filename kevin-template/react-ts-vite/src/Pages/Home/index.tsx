@@ -1,17 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, { useState, useEffect } from 'react';
 
-class HomePage extends PureComponent<any> {
-  constructor(props: any) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <>
-        <h1>Home Page</h1>
-      </>
-    )
-  }
+function Home(props: any) {
+    
+  return (
+    <>
+      <h1>Home</h1>
+    </>
+  )
 }
-
-export default HomePage
+export default Home;
